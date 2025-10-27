@@ -52,11 +52,11 @@ pushd $(dirname "$0") > /dev/null
 CORES=`cat /proc/cpuinfo | grep -c processor`
 
 # Define toolchain variables
-CLANG_DIR=$PWD/toolchain/clang_14
+CLANG_DIR=${HOME}/toolchains/clang-r416183b
 PATH=$CLANG_DIR/bin:$PATH
 
 # Check if toolchain exists
-if [ ! -f "$CLANG_DIR/bin/clang-14" ]; then
+if [ ! -f "$CLANG_DIR/bin/clang-12" ]; then
     echo "-----------------------------------------------"
     echo "Toolchain not found! Downloading..."
     echo "-----------------------------------------------"
